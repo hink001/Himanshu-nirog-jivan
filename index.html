@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirog Givan - AI Health Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Nirog Givan</h1>
+            <p>AI-powered natural health solutions</p>
+        </header>
+
+        <main>
+            <section id="scanner">
+                <h2>Scan Medicine or Skin Mark</h2>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button onclick="scanImage()">Analyze</button>
+                <div id="result" class="output-box"></div>
+            </section>
+
+            <section id="chatbot">
+                <h2>Ask Health Questions</h2>
+                <input type="text" id="userQuery" placeholder="Type your question...">
+                <button onclick="askAI()">Ask AI</button>
+                <div id="response" class="output-box"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
